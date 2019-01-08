@@ -1,0 +1,47 @@
+Arguments: 
+  /usr/local/Cellar/node/11.6.0/bin/node /usr/local/Cellar/yarn/1.12.3/libexec/bin/yarn.js add --help
+
+PATH: 
+  /Users/Jeff/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/opt/X11/bin:/Users/Jeff/bin:/usr/local/sbin:/Users/Jeff/go/bin:/Users/Jeff/go/bin
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  11.6.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/Jeff/dotfiles/nvim-deltaskelta/rplugin/node/nvim-deltaskelta/package.json: Unexpected string in JSON at position 168
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:1631:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "nvim-deltaskelta",
+    "version": "0.1.0",
+    "description": "deltaskelta's neovim plugin",
+    "main": "./lib/index.js",
+    "scripts": {
+      "test": "jest"
+      "build": 'tsc',
+      "watch": 'tsc --watch true'
+    },
+    "keywords": [
+      "deltaskelta",
+      "neovim"
+    ],
+    "author": "Jeff Willette <deltaskelta>",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

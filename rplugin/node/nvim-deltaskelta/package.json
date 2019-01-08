@@ -1,0 +1,25 @@
+{
+  "name": "nvim-deltaskelta",
+  "version": "0.1.0",
+  "description": "deltaskelta's neovim plugin",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "watch": "tsc --watch true"
+  },
+  "keywords": [
+    "deltaskelta",
+    "neovim"
+  ],
+  "author": "Jeff Willette <deltaskelta>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/msgpack-lite": "^0.1.6",
+    "@types/node": "^10.12.18",
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "neovim": "^4.2.1"
+  }
+}
