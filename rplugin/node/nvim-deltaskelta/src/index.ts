@@ -1,12 +1,17 @@
-import { NvimPlugin } from "neovim";
+import { NvimPlugin } from 'neovim';
 
-const echo = () => {
-  console.log("echoed something");
+const echo = (plugin: NvimPlugin) => {
+  plugin.nvim.outWriteLine(`it is: ${new Date().toDateString()}`);
+};
+
+const onBufEnter = (plugin: NvimPlugin) => {
+  plugin.nvim.outWriteLine('onBufEnter called');
 };
 
 export default (plugin: NvimPlugin) => {
-  plugin.registerAutocmd("BufEnter", () => console.log("bufenter called"), {
-    pattern: "*"
+  plugin.registerAutocmd('BufEnter', () => onBufEnter(plugin), {
+    pattern: '*',
   });
-  plugin.registerCommand("ECHOYO", echo);
+
+  plugin.registerCommand('EchoTime', () => echo(plugin));
 };
